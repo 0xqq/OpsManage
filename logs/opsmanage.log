@@ -1,3 +1,31 @@
-﻿2018-10-28 14:24:45 [WARNING] 获取SQL审核配置信息失败: SQL_Audit_Control matching query does not exist.
-2018-10-28 14:24:45 [WARNING] 获取Inception服务器信息失败: Inception_Server_Config matching query does not exist.
-2018-10-28 14:44:54 [WARNING] 资产组查询失败：
+﻿2018-11-06 13:14:01 [WARNING] 获取SQL审核配置信息失败: SQL_Audit_Control matching query does not exist.
+2018-11-06 13:14:01 [WARNING] 获取Inception服务器信息失败: Inception_Server_Config matching query does not exist.
+2018-11-08 09:29:01 [WARNING] id:2, error:int() argument must be a string or a number, not 'NoneType'
+2018-11-08 09:32:50 [ERROR] 添加playboo失败: local variable 'playbook_server_value' referenced before assignment
+2018-11-08 09:32:52 [ERROR] 添加playboo失败: local variable 'playbook_server_value' referenced before assignment
+2018-11-08 09:36:55 [WARNING] id:2, error:int() argument must be a string or a number, not 'NoneType'
+2018-11-08 09:44:40 [WARNING] id:2, error:int() argument must be a string or a number, not 'NoneType'
+2018-11-08 09:44:56 [WARNING] id:2, error:int() argument must be a string or a number, not 'NoneType'
+2018-11-08 09:47:59 [WARNING] id:2, error:int() argument must be a string or a number, not 'NoneType'
+2018-11-08 10:10:11 [ERROR] run playbook failed: The field 'hosts' has an invalid value, which includes an undefined variable. The error was: float object has no element 8
+
+The error appears to have been in '/mnt/OpsManage/upload/playbook/online-b5c8daf5.yaml': line 5, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- hosts: "{{172.31.8.12}}"
+  ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
