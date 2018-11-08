@@ -14,7 +14,8 @@
  * Ansible版本：2.0 + 
  * 部署平台及节点服务器：Rsync 3+
  * MySQL版本：5.1-5.6
-
+## 效果图
+![image](https://github.com/ArchitecTang/OpsManage/blob/master/demo_imgs/effect.png)
 ## OpsManage功能说明
 ![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/opsmanage.png)
 
