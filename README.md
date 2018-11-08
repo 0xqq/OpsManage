@@ -18,19 +18,11 @@
  * MySQL版本：5.1-5.6
 
 ## OpsManage功能说明
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/opsmanage.png)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/opsmanage.png)
 
 ## Docker构建OpsManage
-[传送门](https://github.com/welliamcao/OpsManage/wiki/Docker%E6%9E%84%E5%BB%BAOpsManage)
+[传送门](https://github.com/ArchitecTang/OpsManage/wiki/Docker%E6%9E%84%E5%BB%BAOpsManage)
 
-## Demo地址
-[传送门](http://47.75.140.140:8896)
-```
-用户:demo 密码：demo
-只能演示部分功能，并且每隔两小时重置数据。
-```
-## QQ交流群
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/qq_group.png)
 
 ## 安装环境配置
 一、安装Python
@@ -75,7 +67,7 @@
 四、安装模块
 ```
 # cd /mnt/
-# git clone https://github.com/welliamcao/OpsManage.git
+# git clone https://github.com/ArchitecTang/OpsManage.git
 # cd /mnt/OpsManage/
 # pip install -r requirements.txt  #注意，如果出现错误不要跳过，请根据错误信息尝试解决
 # easy_install paramiko==2.4.1
@@ -96,7 +88,7 @@ daemonize yes
 loglevel warning
 logfile "/var/log/redis.log"
 bind 你的服务器ip地址
-例如： bind 127.0.0.1 192.168.88.201
+例如： bind 127.0.0.1 172.31.8.12
 ```
 ```
 # cd ../
@@ -120,8 +112,8 @@ mysql>\q
 ```
 # cd /mnt/OpsManage/OpsManage
 # vim settings.py
-BROKER_URL =  redis://192.168.1.233:6379/3 #修改成自己的配置，格式是redis://[:password]@host:port/db
-REDSI_KWARGS_LPUSH = {"host":'192.168.1.233','port':6379,'db':3} #修改成自己的配置
+BROKER_URL =  redis://172.31.8.12:6379/3 #修改成自己的配置，格式是redis://[:password]@host:port/db
+REDSI_KWARGS_LPUSH = {"host":'172.31.8.12','port':6379,'db':3} #修改成自己的配置
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
@@ -246,23 +238,23 @@ numprocs=1
 
 如果您觉得OpsManage对您有所帮助，可以通过下列方式进行捐赠，谢谢！
 
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/donate.png)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/donate.png)
 
 ## 部分功能截图:
 Ansible部署功能：
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/ansible.gif)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/ansible.gif)
 
 代码部署：
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/project.gif)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/project.gif)
 
 资产管理：
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/assets.gif)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/assets.gif)
 
 计划任务管理：
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/crontab.gif)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/crontab.gif)
 
 全局配置：
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/config.gif)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/config.gif)
 
 用户管理：
-![image](https://github.com/welliamcao/OpsManage/blob/master/demo_imgs/user.gif)
+![image](https://github.com/ArchitecTang/OpsManage/tree/master/demo_imgs/user.gif)
