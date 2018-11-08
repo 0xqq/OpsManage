@@ -119,8 +119,8 @@ DATABASES = {
         'ENGINE':'django.db.backends.mysql',
         'NAME':'opsmanage',
         'USER':'root',		#修改成自己的配置
-        'PASSWORD':'welliam',	#修改成自己的配置
-        'HOST':'192.168.1.233', #修改成自己的配置
+        'PASSWORD':'123456',	#修改成自己的配置
+        'HOST':'172.31.8.12', #修改成自己的配置
         'PORT': 3306
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
